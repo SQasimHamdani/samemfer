@@ -23,37 +23,36 @@ const Web3Page = () => {
 			const ethervalue = String("0.01" * mintNumber);
 			const response = await myContractSigner.mint(mintNumber, {value: ethers.utils.parseEther(ethervalue)});
 			console.log(response);
-		} catch (err) {
-            
+        }
+        catch (err) {
             if ( err?.code === 4001) {
                 // console.log("User Declined Payment")
                 setError("User Declined Payment");
             }
-            
             if ( err?.error?.code === -32000) {
                 // console.log("You have Insufficient Balance")
                 setError("You have Insufficient Balance");
             }
-        
         }
-	};
+    };
+    
     useEffect(() => {
-		fetchData();})
-
+        fetchData();
+    })
 
 	async function fetchData() {
 		if (account) {
-			  try {
-				const myContractSigner = getContract(library, account);
-				const sup = await myContractSigner.totalSupply();
-				setSupply(String(sup));
-			  }catch (err) {
-            
-				setError(err?.error?.message)
-			
-			}
-			}
-		}
+            try {
+                const myContractSigner = getContract(library, account);
+                const sup = await myContractSigner.totalSupply();
+                setSupply(String(sup));
+            }
+            catch (err) {
+                setError(err?.error?.message)
+            }
+        }
+    }
+
 	const freeMint = async () => {
 		try {
 			const myContractSigner = getContract(library, account);
@@ -124,23 +123,27 @@ const Web3Page = () => {
 				<div className="col-sm-12 col-md-7">
 					<img className="image_blck image_banner" src="../images/main_image.gif" alt="lol" />
 				</div>
-				<div className="col-sm-12 col-md-5 text-center  mob_se">
-					{account ? 
-						<p>You're connected with {account}</p> 
-						: ''
-					}
+				<div className="col-sm-12 col-md-5 text-center mob_se">
+					
 					<div>
-						<div className="mint-info"> <span className="mint_btn minted-description red-description"><a className="glow-on-hover" href="https://opensea.io/collection/samfers">Check on OpenSea</a></span> </div>
+                        <div className="mint-info">
+                            <span className="mint_btn minted-description red-description">
+                                <a className="glow-on-hover" target={"_blank"} href="https://opensea.io/collection/samfers">Check on OpenSea</a>
+                            </span>
+                        </div>
 						<div> 
 							{account ?
 								<h3 type='color:red;'>Supply  <span>{supply}</span>/10021</h3> 
 							: 
 								''
-								}
-								
-						</div>
+                            }	
+                        </div>
+                        {account ? 
+                            <p className='wallet_address'>You're connected with {account}</p> 
+                            : ''
+                        }
 					</div> 
-					{account ? 
+					{!account ? 
 						<div>
 							<button className="glow-on-hover" onClick={connectMetamaskSimple}>Connect Metamask</button>
 						</div> 
@@ -152,20 +155,18 @@ const Web3Page = () => {
 								<button className="glow-on-hover minted_width">{mintNumber}</button>
 								<button className="glow-on-hover mint_width" onClick={increaseMintNumber}>+</button>
 							</div> 
-							{ supply< 2000 ? 
-								<button className="glow-on-hover" onClick={freeMint}> Freemint </button> 
-							: 
-								<span>Freemint is off</span> 
+							{ supply> 1999 && supply < 10021 ? 
+								<button className="glow-on-hover" onClick={mint}> Mint </button> 
+                            : 
+                                <>
+                                    <button className="glow-on-hover" onClick={freeMint}> 3 Freemints  </button> 
+                                    <span className='d-block'>per Transaction</span> 
+                                </>
 							} 
 							{error ?
-								<h3 className="bg-danger text-light">{error}</h3> 
+								<h3 className="bg-danger text-light p-3 rounded">{error}</h3> 
 							: 
 								''
-							} 
-							{ supply < 10021 && supply> 1999 ?
-								<button onClick={mint}> MINT </button> 
-							:
-								<h3 className="pl-3">Mint is off</h3>
 							} 
 						</div> 
 					}
@@ -173,7 +174,10 @@ const Web3Page = () => {
 			</div>
 			<div className="row">
 				<div className="col-sm-12 mob_para">
-						<p>#Samemfers generated entirely from copy-pasting drawing by sarbshi. this project is in the public domain feel free to use #Samemfers any way u want (we are mFers, we don't care)</p> <span className="minted-description mint_verify red-description"><a href="https://etherscan.io/address/0xec139f62e9d1d275db05c85c248e9dcb09cbf012">VERIFIED CONTRACT</a></span> 
+                    <p>#Samemfers generated entirely from copy-pasting drawing by sarbshi. this project is in the public domain feel free to use #Samemfers any way u want (we are mFers, we don't care)</p>
+                    <span className="minted-description mint_verify red-description">
+                        <a href="https://etherscan.io/address/0xec139f62e9d1d275db05c85c248e9dcb09cbf012">VERIFIED CONTRACT</a>
+                    </span> 
 				</div>
 			</div>
 		</div>

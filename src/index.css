@@ -11,10 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .image_set{
-  display: block;
-margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+    width: 40%;
 }
+
 .image_blck{
   display: block;
 }
@@ -43,6 +46,10 @@ text-decoration: none;
 }
 .mint-info{
   margin: 15% 0 8% 0;
+}
+.wallet_address{
+  font-size: 30px;
+  /* font-weight: bold;  */
 }
 .mint_verify a{
 display: block;
@@ -113,14 +120,19 @@ p{
 width: 50px;
 }
 .minted_btn{
-margin-top: 15%;
+margin-top: 5%;
 }
 .minted_width{
   width: 180px;
 }
 @media screen and (max-width: 992px) {
   .image_set{
-    width: 100%;
+    width: 40%;
+    }
+
+    .wallet_address{
+        font-size: 25px;
+        /* font-weight: bold;  */
     }
     
     .image_banner{
@@ -141,6 +153,10 @@ margin-top: 15%;
   p{
     font-size: 30px;
   }
+  .wallet_address{
+        font-size: 30px;
+        /* font-weight: bold;  */
+    }
   .mob_se{
     text-align: center;
     margin: 7% 0;
