@@ -152,17 +152,21 @@ const Web3Page = () => {
 							<button className="glow-on-hover" onClick={disconnect}> Disconnect </button>
 							<div className="minted_btn">
 								<button className="glow-on-hover mint_width" onClick={decreaseMintNumber}>-</button>
-								<button className="glow-on-hover minted_width">{mintNumber}</button>
-								<button className="glow-on-hover mint_width" onClick={increaseMintNumber}>+</button>
-							</div> 
-							{ supply> 1999 && supply < 10021 ? 
-								<button className="glow-on-hover" onClick={mint}> Mint </button> 
+                                { supply > 1999 && supply < 10021 ? 
+                                    <button className="glow-on-hover minted_width" onClick={mint}> Mint {mintNumber}</button> 
+                                    : 
+                                    <>
+                                        <button className="glow-on-hover minted_width" onClick={freeMint}>Freemint {mintNumber} </button> 
+                                    </>
+                                } 
+                                <button className="glow-on-hover mint_width" onClick={increaseMintNumber}>+</button>
+                            </div> 
+                            { supply > 1999 && supply < 10021 ? 
+                                ""
                             : 
-                                <>
-                                    <button className="glow-on-hover" onClick={freeMint}> 3 Freemints  </button> 
-                                    <span className='d-block'>per Transaction</span> 
-                                </>
-							} 
+                                <span className='d-block'>3 Freemints per Transaction</span>
+                            } 
+                            
 							{error ?
 								<h3 className="bg-danger text-light p-3 rounded">{error}</h3> 
 							: 
