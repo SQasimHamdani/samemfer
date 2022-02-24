@@ -12,20 +12,20 @@ code {
     monospace;
 }
 .image_set{
+  display: block;
 margin: 0 auto;
-display: block;
 }
 .image_blck{
   display: block;
 }
 .image_banner{
-width: 60%;
+width: 88%;
 }
 .glow-on-hover{
-  font-size: 15px;
+  font-size: 28px;
   font-weight: bold; 
-  width: 220px;
-  height: 50px;
+  width: 280px;
+  height: 70px;
   border: none;
   outline: none;
   color: #fff;
@@ -42,7 +42,7 @@ padding: 10px 20px;
 text-decoration: none;
 }
 .mint-info{
-  margin: 10px;
+  margin: 15% 0 8% 0;
 }
 .mint_verify a{
 display: block;
@@ -69,6 +69,10 @@ color: black;
   transition: opacity .3s ease-in-out;
   border-radius: 10px;
 }
+.mob_para{
+  margin: 2% 0;
+  text-align: center;
+    }
 
 .glow-on-hover:active {
   color: #000
@@ -104,4 +108,44 @@ p{
     font-weight: 400;
     font-size: 50px;
     font-style: normal;
+}
+.mint_width{
+width: 50px;
+}
+.minted_btn{
+margin-top: 15%;
+}
+.minted_width{
+  width: 180px;
+}
+@media screen and (max-width: 992px) {
+  .image_set{
+    width: 100%;
+    }
+    
+    .image_banner{
+      width: 100%;
+    }
+    .glow-on-hover{
+      font-size: 22px;
+      height: 50px;
+    }
+    .minted_btn{
+      margin-top: 6% !important;
+    }
+    .mint-info{
+     margin-top: 10% 0 5% 0 !important;
+    }
+}
+@media screen and (max-width: 767px) {
+  p{
+    font-size: 30px;
+  }
+  .mob_se{
+    text-align: center;
+    margin: 7% 0;
+        }
+  .mob_para{
+margin: 5% 0;
+  }
 }

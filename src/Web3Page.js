@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react';
 
 
 const Web3Page = () => {
+	// let values;
 	
     //connector, library, chainId, account, activate, deactivate
     const {library , account , activate , deactivate } =  useWeb3React();
@@ -115,64 +116,65 @@ const Web3Page = () => {
 	return (
 		<div className="container">
 			<div className="row">
-				<div className="col-12"> 
+				<div className="col-sm-12 pt-3 pb-5"> 
 					<img className="image_set" src="../images/logo.jpg" alt="entree" /> 
 				</div>
 			</div>
 			<div className="row">
-				<div className="col-sm-6">
+				<div className="col-sm-12 col-md-7">
 					<img className="image_blck image_banner" src="../images/main_image.gif" alt="lol" />
 				</div>
-				{account ? 
-					<p>You're connected with {account}</p> 
-					: ''
-				}
-				<div>
-					<div className="mint-info"> <span className="mint_btn minted-description red-description"><a className="glow-on-hover" href="https://opensea.io/collection/samfers">Check on OpenSea</a></span> </div>
-					<div> 
-						{account ?
-							<h3 type='color:red;'>Supply  <span>{supply}</span>/10021</h3> 
-						: 
-							''
-                        }
-							
-					</div>
-				</div> 
-				{!account ? 
+				<div className="col-sm-12 col-md-5 text-center  mob_se">
+					{account ? 
+						<p>You're connected with {account}</p> 
+						: ''
+					}
 					<div>
-						<button className="glow-on-hover" onClick={connectMetamaskSimple}> Connect with Metamask </button>
+						<div className="mint-info"> <span className="mint_btn minted-description red-description"><a className="glow-on-hover" href="https://opensea.io/collection/samfers">Check on OpenSea</a></span> </div>
+						<div> 
+							{account ?
+								<h3 type='color:red;'>Supply  <span>{supply}</span>/10021</h3> 
+							: 
+								''
+								}
+								
+						</div>
 					</div> 
-				:
-					<div>
-						<button onClick={disconnect}> Disconnect </button>
+					{account ? 
 						<div>
-							<button onClick={decreaseMintNumber}>-</button>
-							<button>{mintNumber}</button>
-							<button onClick={increaseMintNumber}>+</button>
+							<button className="glow-on-hover" onClick={connectMetamaskSimple}>Connect Metamask</button>
 						</div> 
-						{ supply< 2000 ? 
-							<button onClick={freeMint}> Freemint </button> 
-						: 
-							<span>Freemint is off</span> 
-						} 
-						{error ?
-							<h3 className="bg-danger text-light">{error}</h3> 
-						: 
-							''
-						} 
-						{ supply < 10021 && supply> 1999 ?
-							<button onClick={mint}> MINT </button> 
-						:
-							<h3>Mint is off</h3>
-						} 
-				</div> 
-				} 
+					:
+						<div>
+							<button className="glow-on-hover" onClick={disconnect}> Disconnect </button>
+							<div className="minted_btn">
+								<button className="glow-on-hover mint_width" onClick={decreaseMintNumber}>-</button>
+								<button className="glow-on-hover minted_width">{mintNumber}</button>
+								<button className="glow-on-hover mint_width" onClick={increaseMintNumber}>+</button>
+							</div> 
+							{ supply< 2000 ? 
+								<button className="glow-on-hover" onClick={freeMint}> Freemint </button> 
+							: 
+								<span>Freemint is off</span> 
+							} 
+							{error ?
+								<h3 className="bg-danger text-light">{error}</h3> 
+							: 
+								''
+							} 
+							{ supply < 10021 && supply> 1999 ?
+								<button onClick={mint}> MINT </button> 
+							:
+								<h3 className="pl-3">Mint is off</h3>
+							} 
+						</div> 
+					}
+				</div>
 			</div>
 			<div className="row">
-                <p>#Samemfers generated entirely from copy-pasting drawing by sarbshi. this project is in the public domain feel free to use #Samemfers any way u want (we are mFers, we don't care)</p>
-                <span className="minted-description mint_verify red-description">
-                    <a href="https://etherscan.io/address/0xec139f62e9d1d275db05c85c248e9dcb09cbf012">VERIFIED CONTRACT</a>
-                </span> 
+				<div className="col-sm-12 mob_para">
+						<p>#Samemfers generated entirely from copy-pasting drawing by sarbshi. this project is in the public domain feel free to use #Samemfers any way u want (we are mFers, we don't care)</p> <span className="minted-description mint_verify red-description"><a href="https://etherscan.io/address/0xec139f62e9d1d275db05c85c248e9dcb09cbf012">VERIFIED CONTRACT</a></span> 
+				</div>
 			</div>
 		</div>
 	);

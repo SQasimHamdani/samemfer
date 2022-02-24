@@ -10,7 +10,9 @@
 /coverage
 
 # production
+# /build
 
+.history
 
 # misc
 .DS_Store
