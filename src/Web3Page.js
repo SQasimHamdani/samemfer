@@ -103,14 +103,14 @@ const Web3Page = () => {
 		}
 	};
 
-	//web3react coinbase
-	const connectCoinbaseSimple = async () => {
-		try {
-			await activate(walletlink);
-		} catch (ex) {
-			console.log(ex);
-		}
-	};
+	// //web3react coinbase
+	// const connectCoinbaseSimple = async () => {
+	// 	try {
+	// 		await activate(walletlink);
+	// 	} catch (ex) {
+	// 		console.log(ex);
+	// 	}
+	// };
 	
 	return (
 		<div className="container">
@@ -134,7 +134,7 @@ const Web3Page = () => {
 							<h3 type='color:red;'>Supply  <span>{supply}</span>/10021</h3> 
 						: 
 							''
-							}
+                        }
 							
 					</div>
 				</div> 
@@ -167,10 +167,12 @@ const Web3Page = () => {
 						} 
 				</div> 
 				} 
-				
 			</div>
 			<div className="row">
-					<p>#Samemfers generated entirely from copy-pasting drawing by sarbshi. this project is in the public domain feel free to use #Samemfers any way u want (we are mFers, we don't care)</p> <span className="minted-description mint_verify red-description"><a href="https://etherscan.io/address/0xec139f62e9d1d275db05c85c248e9dcb09cbf012">VERIFIED CONTRACT</a></span> 
+                <p>#Samemfers generated entirely from copy-pasting drawing by sarbshi. this project is in the public domain feel free to use #Samemfers any way u want (we are mFers, we don't care)</p>
+                <span className="minted-description mint_verify red-description">
+                    <a href="https://etherscan.io/address/0xec139f62e9d1d275db05c85c248e9dcb09cbf012">VERIFIED CONTRACT</a>
+                </span> 
 			</div>
 		</div>
 	);
