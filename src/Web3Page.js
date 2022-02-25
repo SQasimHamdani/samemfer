@@ -133,7 +133,7 @@ const Web3Page = () => {
                         </div>
 						<div> 
 							{account ?
-								<h3 type='color:red;'>Supply  <span>{supply}</span>/10021</h3> 
+								<h3 type='color:red;'> <span>{supply}</span>/10021</h3> 
 							: 
 								''
                             }	
