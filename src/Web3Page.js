@@ -89,11 +89,11 @@ const Web3Page = () => {
 		if (mintNumber > 1)
 			setMintNumber(mintNumber -1);
 	  };
-	  async function increaseMintNumber() {
+    async function increaseMintNumber() {
 		const max = supply < 2000 ? 3 : 10021 - supply;
 		if (mintNumber < max)
 			setMintNumber(mintNumber + 1);
-		};
+    };
 	//web3react metamask
 	const connectMetamaskSimple = async () => {
 		try {
@@ -166,7 +166,7 @@ const Web3Page = () => {
                             : 
                                 <span className='d-block'>3 Freemints per Transaction</span>
                             } 
-                            
+
 							{error ?
 								<h3 className="bg-danger text-light p-3 rounded">{error}</h3> 
 							: 
@@ -178,10 +178,39 @@ const Web3Page = () => {
 			</div>
 			<div className="row">
 				<div className="col-sm-12 mob_para">
-                    <p>#Samemfers generated entirely from copy-pasting drawing by sarbshi. this project is in the public domain feel free to use #Samemfers any way u want (we are mFers, we don't care)</p>
+                    <p>We are the Samemfer coming from a parralel metaverse. We heard about #mfer vibe in your metaverse, so we travelled all the way from our metaverse to vibe with u ! Our Sartoshi settled an agreement with your Sartoshi: 10% to Sartoshi, 10% to Unicef and 100%  royalties to #mfer charity to help UKRAINE <img className='footer_images' src="../images/ukraine.svg"/>
+                        <br></br>
+                        #Samemfers are generated entirely from copy-pasting drawing by sartoshi. This project is in the public domain feel free to use #Samemfers in any way u want (we are mFers, we don't care)</p>
+                    
+
+                    <br></br>
+                    <p>FAQs</p>
+                    <p>Q: WHAT ARE SAMEMFERS?
+                        <br></br>
+                            SAMEMFERS ARE EXACT SAME MFERS COMING FROM A PARALLEL MFER METAVERSE DIMENSION TO VIBE WITH ALL MFERS IN THE SPACE
+                            <br></br>
+                        Q: WHO RUNS THE PROJECT?
+                        <br></br>
+                            YOU ARE THE  PROJECT AND YOU'RE THE SAME MFERS AS THE MFERS,
+                            <br></br>
+                        Q: CHARITY ?
+                        <br></br>
+                        WE’RE JOINING FORCES TO HELP UKRAINE, 100% ROYALTIES GOING TO MFER CHARITY, 10% OF MINT TO UNICEF, 10% TO SARTOSHI
+                        <br></br>
+                        Q: WHAT'S NEXT?
+                        <br></br>
+                        AS THE MFERS, YOU'LL DECIDE WHAT'S NEXT, CAUSE YOU'RE THE SAMEMFERS AND YOU OWN THE PROJECT
+                        <br></br>
+                        Q: WHAT ARE THE ROYALTIES FOR THIS COLLECTION?
+                        <br></br>
+                        100% ROYALTIES TO HELP UKRAINE CURRENT SITUATION. ALL ROYALTIES GOING TO MFER CHARITY</p>
                     <span className="minted-description mint_verify red-description">
                         <a href="https://etherscan.io/address/0xec139f62e9d1d275db05c85c248e9dcb09cbf012">VERIFIED CONTRACT</a>
                     </span> 
+
+                    <a target="_blank" href="https://twitter.com/same_mfer"> <img className='' src="https://img.icons8.com/color/58/000000/twitter-circled--v4.png"/></a>
+                    <a target="_blank" href="https://opensea.io/collection/samfers"> <img className='footer_images' src="../images/opensea.svg"/></a>
+
 				</div>
 			</div>
 		</div>

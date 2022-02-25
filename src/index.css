@@ -93,6 +93,10 @@ color: black;
   opacity: 1;
 }
 
+.footer_images{
+    width: 50px;
+}
+
 .glow-on-hover:after {
   z-index: -1;
   content: '';
