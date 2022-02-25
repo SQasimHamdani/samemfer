@@ -184,24 +184,29 @@ const Web3Page = () => {
                     
 
                     <br></br>
-                    <p>FAQs</p>
-                    <p>Q: WHAT ARE SAMEMFERS?
+                    <p><strong>FAQs</strong></p>
+                    <br></br>
+                    <p> <strong>Q: WHAT ARE SAMEMFERS?</strong>
                         <br></br>
                             SAMEMFERS ARE EXACT SAME MFERS COMING FROM A PARALLEL MFER METAVERSE DIMENSION TO VIBE WITH ALL MFERS IN THE SPACE
                             <br></br>
-                        Q: WHO RUNS THE PROJECT?
+                    <br></br>
+                      <strong> Q: WHO RUNS THE PROJECT?</strong>
                         <br></br>
                             YOU ARE THE  PROJECT AND YOU'RE THE SAME MFERS AS THE MFERS,
                             <br></br>
-                        Q: CHARITY ?
-                        <br></br>
+                    <br></br>
+                      <strong>  Q: CHARITY ?</strong>
+                    <br></br>
                         WE’RE JOINING FORCES TO HELP UKRAINE, 100% ROYALTIES GOING TO MFER CHARITY, 10% OF MINT TO UNICEF, 10% TO SARTOSHI
                         <br></br>
-                        Q: WHAT'S NEXT?
+                        <br></br>
+                      <strong> Q: WHAT'S NEXT?</strong>
                         <br></br>
                         AS THE MFERS, YOU'LL DECIDE WHAT'S NEXT, CAUSE YOU'RE THE SAMEMFERS AND YOU OWN THE PROJECT
                         <br></br>
-                        Q: WHAT ARE THE ROYALTIES FOR THIS COLLECTION?
+                        <br></br>
+                        <strong>Q: WHAT ARE THE ROYALTIES FOR THIS COLLECTION?</strong>
                         <br></br>
                         100% ROYALTIES TO HELP UKRAINE CURRENT SITUATION. ALL ROYALTIES GOING TO MFER CHARITY</p>
                     <span className="minted-description mint_verify red-description">
