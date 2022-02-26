@@ -164,7 +164,7 @@ const Web3Page = () => {
                             { supply > 1999 && supply < 10021 ? 
                                 ""
                             : 
-                                <span className='d-block'>3 Freemints per Transaction</span>
+                                <span className='d-block'>Unlimited mint (3 per transactions)</span>
                             } 
 
 							{error ?
